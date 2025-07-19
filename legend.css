@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+@keyframes fadeInUp {
+  0% {
+    filter: blur(100px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+.body-animation {
+  animation: 3.0s fadeInUp;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  border: 10px;
+}
+
+#fountain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 1.0s ease-out;
+  overflow-y: hidden;
+  filter: brightness(85%);
+}
+
+#heroes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 1.0s ease-out;
+  overflow-y: hidden;
+}
+
+.prophecy {
+    display: none;
+}
