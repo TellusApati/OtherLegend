@@ -8,26 +8,28 @@
 </head>
 <body class="body-animation">
 
-<div id="container">
-    <p class="prophecy"> Фонтан, что будет запечатан ими. </p>
+<div onclick="play()" id="container">
+    <p class="prophecy"> Не справившись с пророчеством, одни герои пали. </p>
     <img id="fountain" src="the%20fountain.png">
-    <p class="prophecy"> Герои, что низвергнут небеса. </p>
+    <p class="prophecy"> Однако, на их место другие люди встали. </p>
     <img id="heroes" src="the%20heroes.png">
 </div>
 
 
-
 <script>
-    // И Он, но если Он есть Он, то кто другой?
-
+    // Но кто сразил героев, за то, что те узнали?
 
 
     const container = document.getElementById('container');
     const fountain = document.getElementById('fountain');
     const heroes = document.getElementById('heroes');
 
+    var audioPlaying = false;
+
     container.addEventListener('mousemove', (e) => {
-    const { clientX, clientY } = e;
+
+
+        const { clientX, clientY } = e;
         const { width, height } = container.getBoundingClientRect();
         const xOffsetFountain = (clientX / width) * 50;
         const yOffsetFountain = (clientY / height) * 50;
@@ -36,8 +38,18 @@
 
         fountain.style.transform = `translate(-${xOffsetFountain}%, -${yOffsetFountain}%)`;
         heroes.style.transform = `translate(-${xOffsetHeroes}%, -${yOffsetHeroes}%)`;
-
 });
+
+function play() {
+  if (!audioPlaying) {
+    var audio = new Audio('other_legend.mp3');
+    audio.loop = true;
+    audio.play();
+    audioPlaying = true;
+  }
+}
 </script>
+
+
 </body>
 </html>
