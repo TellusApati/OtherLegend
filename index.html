@@ -31,10 +31,10 @@
 
         const { clientX, clientY } = e;
         const { width, height } = container.getBoundingClientRect();
-        const xOffsetFountain = (clientX / width) * 50;
-        const yOffsetFountain = (clientY / height) * 50;
-        const xOffsetHeroes = (clientX / width) * 30;
-        const yOffsetHeroes = (clientY / height) * 30;
+        const xOffsetFountain = (clientX / width) * 20;
+        const yOffsetFountain = (clientY / height) * 20;
+        const xOffsetHeroes = (clientX / width) * 50;
+        const yOffsetHeroes = (clientY / height) * 50;
 
         fountain.style.transform = `translate(-${xOffsetFountain}%, -${yOffsetFountain}%)`;
         heroes.style.transform = `translate(-${xOffsetHeroes}%, -${yOffsetHeroes}%)`;
