@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>CONNECTION_RECORDING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div onclick="play()" id="container">
+  <p id="???">
+    Чтож, если ты хочешь встретиться со мной...
+    Задержи дыхание, продолжай пытаться, и отсчитай до пяти.
+  </p>
+  <video src="CONNECTION_RECORDING.mp4" id="video" onended="window.close()"/>
+</div>
+
+<script>
+
+var videoPlaying = false;
+function play() {
+  if (!videoPlaying) {
+    var video = document.getElementById("video");
+    video.play();
+    videoPlaying = true;
+  }
+}
+
+function end() {
+  window.close();
+}
+</script>
+
+
+</body>
+</html>

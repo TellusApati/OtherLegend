@@ -2,29 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>????</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PROGRAM_LOGGER</title>
 </head>
 <body>
-
-<div onclick="play()" id="container">
-  <video src="CONNECTION_RECORDING.mp4" id="video" onended="end()"/>
-</div>
-
 <script>
-    var audioPlaying = false;
 
-function play() {
-  if (!audioPlaying) {
-    var video = document.getElementById("video");
-    video.play();
-    audioPlaying = true;
-  }
+let attempts = 0;
+if (localStorage.getItem("attempts")) {
+  attempts = Number(localStorage.getItem("attempts"));
+}
+localStorage.setItem("attempts", attempts + 1);
+
+
+if (attempts > 4) {
+localStorage.setItem("attempts", 0);
+  document.location.href = "https://shattereddisk.github.io/rickroll/rickroll.mp4";
+} else {
+  document.location.href = "https://other-legend.ru/CONNECTION_RECORDING";
 }
 
-function end() {
-  window.close();
-}
 </script>
 
 

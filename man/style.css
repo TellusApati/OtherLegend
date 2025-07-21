@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.prophecy {
+    position: absolute;
+    margin: auto;
+    top: 1;
+    left: 0;
+    right: 0;
+    bottom: 1;
+	width: 90%;
+	animation: fadeInUp 30.0s, hovering 7.0s infinite;
+	
+}
+
+@keyframes hovering {
+    0%   {
+		margin-top:0;
+	}
+    50%  {
+		margin-top:0.1%;
+	}
+    100% {
+		margin-top:0;
+	}
+}
+
+@keyframes fadeInUp {
+  0% {
+    filter: opacity(0);
+  }
+  10% {
+    filter: opacity(0);
+  }
+  100% {
+    filter: opacity(1);
+  }
+}
+
+.hidden {
+    display: none;
+}

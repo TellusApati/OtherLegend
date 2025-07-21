@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>???</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<p>Хм, так ты всё-таки хочешь меня увидеть..</p>
+<p>Что? Кто Я?</p>
+<p>Я - Забытый человек.</p>
+<p>Хотя знаешь, забудь об этом.</p>
+<p>Пусть лучше речь будет не про меня.</p>
+<p>Лучше позволь мне показать тебе то, что не дороговорил Он...</p>
+<p>Ты пробовал нажать на дерево?</p>
+
+<div onclick="play()">
+<img class="center" src="tree.gif">
+<img id="prophecy" class="hidden" src="prophecy.png">
+</div>
+<script>
+
+var audioPlaying = false;
+function play() {
+  if (!audioPlaying) {
+    var prophecy = document.getElementById("prophecy");
+    prophecy.classList.add('prophecy');
+    prophecy.classList.remove('hidden');
+
+
+    var audio = new Audio('man.ogg');
+    audio.loop = true;
+    audio.play();
+    audioPlaying = true;
+  }
+}
+
+
+
+</script>
+
+
+</body>
+</html>
