@@ -12,6 +12,11 @@ body {
   }
 }
 
+p {
+	color: black;
+}
+
+
 .body-animation {
   animation: 3.0s fadeInUp;
 }
